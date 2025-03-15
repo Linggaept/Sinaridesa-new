@@ -1,139 +1,88 @@
-"use client";
+import { Marquee } from "@/components/magicui/marquee";
+import { cn } from "@/lib/utils";
 
-import React from "react";
-import {
-  Box,
-  IconButton,
-  useBreakpointValue,
-  Stack,
-  Heading,
-  Text,
-  Container,
-} from "@chakra-ui/react";
-// Here we have used react-icons package for the icons
-import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
-// And react-slick as our Carousel Lib
-import Slider from "react-slick";
+const reviews = [
+  {
+    title: "Muhammad Ikhsan",
+    text: "Ini adalah program yang sangat menarik. Sinari Desa, yang selalu memberikan pelayanan yang baik. Sinari Desa, yang selalu memberikan pelayanan yang baik.",
+  },
+  {
+    title: "Arip Santoso",
+    text: "Kami sangat senang dengan program ini. Kami sangat senang dengan program ini. Sinari Desa, yang selalu memberikan pelayanan yang baik. Sinari Desa, yang selalu memberikan pelayanan yang baik.",
+  },
+  {
+    title: "Dwi Aris Setiawan",
+    text: "Program ini sangat menarik. Sinari Desa, yang selalu memberikan pelayanan yang baik. Sinari Desa, yang selalu memberikan pelayanan yang baik.",
+  },
+  {
+    title: "Siti Aminah",
+    text: "Saya merasa sangat terbantu dengan adanya Sinari Desa. Programnya tidak hanya membantu ekonomi desa, tetapi juga meningkatkan kualitas hidup kami.",
+  },
+  {
+    title: "Bambang Sugiharto",
+    text: "Sinari Desa adalah inisiatif yang luar biasa. Programnya membantu kami dalam pengelolaan sumber daya desa dengan lebih efektif dan efisien.",
+  },
+  {
+    title: "Rina Wahyuni",
+    text: "Pelayanan dari Sinari Desa sangat baik! Timnya selalu siap membantu dan memberikan solusi terbaik bagi masyarakat desa.",
+  },
+];
 
-// Settings for the slider
-const settings = {
-  dots: true,
-  arrows: false,
-  fade: true,
-  infinite: true,
-  autoplay: true,
-  speed: 500,
-  autoplaySpeed: 5000,
-  slidesToShow: 1,
-  slidesToScroll: 1,
+const firstRow = reviews.slice(reviews.length / 6);
+
+const ReviewCard = ({ title, text }: { title: string; text: string }) => {
+  return (
+    <div className="flex flex-wrap gap-4">
+      <figure
+        className={cn(
+          "relative w-full max-w-md cursor-pointer overflow-hidden rounded-xl border p-4 shadow-md shadow-black/30 transition-all duration-300",
+          // light styles
+          "border-gray-950/[.1] bg-gray-950/[.01]"
+          // dark styles
+        )}
+      >
+        <div className="flex flex-row items-center gap-2 w-full">
+          <div className="flex flex-col justify-center items-center justify-items-center w-full">
+            <figcaption className="text-lg font-medium dark:text-white">
+              {title}
+            </figcaption>
+            <blockquote className="mt-2 text-sm text-gray-800">
+              {text}
+            </blockquote>
+          </div>
+        </div>
+      </figure>
+    </div>
+  );
 };
 
-export default function Testimonial() {
-  // As we have used custom buttons, we need a reference variable to
-  // change the state
-  const [slider, setSlider] = React.useState<Slider | null>(null);
-
-  // These are the breakpoints which changes the position of the
-  // buttons as the screen size changes
-  const top = useBreakpointValue({ base: "90%", md: "50%" });
-  const side = useBreakpointValue({ base: "30%", md: "40px" });
-
-  // This list contains all the data for carousels
-  // This can be static or loaded from a server
-  const cards = [
-    {
-      title: "Muhammad Ikhsan",
-      text: "Ini adalah program yang sangat menarik. Sinari Desa, yang selalu memberikan pelayanan yang baik. Sinari Desa, yang selalu memberikan pelayanan yang baik.",
-    },
-    {
-      title: "Arip Santoso",
-      text: "Kami sangat senang dengan program ini. Kami sangat senang dengan program ini. Sinari Desa, yang selalu memberikan pelayanan yang baik. Sinari Desa, yang selalu memberikan pelayanan yang baik.",
-    },
-    {
-      title: "Dwi Aris Setiawan",
-      text: "Program ini sangat menarik. Sinari Desa, yang selalu memberikan pelayanan yang baik. Sinari Desa, yang selalu memberikan pelayanan yang baik.",
-    },
-  ];
-
+export function Testimonial() {
   return (
-    <section className="w-full p-10">
-      <h1 className="text-white font-bold text-xl md:text-5xl text-center bg-red-700 p-2">Testimonial</h1>
-      <Box
-        position={"relative"}
-        height={"600px"}
-        width={"full"}
-        overflow={"hidden"}
-      >
-        {/* CSS files for react-slick */}
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-        />
-        {/* Left Icon */}
-        <IconButton
-          aria-label="left-arrow"
-          variant="ghost"
-          position="absolute"
-          left={side}
-          top={top}
-          transform={"translate(0%, -50%)"}
-          zIndex={2}
-          onClick={() => slider?.slickPrev()}
-        >
-          <BiLeftArrowAlt size="40px" />
-        </IconButton>
-        {/* Right Icon */}
-        <IconButton
-          aria-label="right-arrow"
-          variant="ghost"
-          position="absolute"
-          right={side}
-          top={top}
-          transform={"translate(0%, -50%)"}
-          zIndex={2}
-          onClick={() => slider?.slickNext()}
-        >
-          <BiRightArrowAlt size="40px" />
-        </IconButton>
-        {/* Slider */}
-        <Slider {...settings} ref={(slider) => setSlider(slider)}>
-          {cards.map((card, index) => (
-            <Box
-              key={index}
-              height={"6xl"}
-              position="relative"
-              backgroundPosition="center"
-              backgroundRepeat="no-repeat"
-              backgroundSize="cover"
-            >
-              {/* This is the block you need to change, to customize the caption */}
-              <Container size="container.lg" height="600px" position="relative">
-                <Stack
-                  spacing={6}
-                  w={"full"}
-                  maxW={"lg"}
-                  position="absolute"
-                  top="50%"
-                  transform="translate(0, -50%)"
-                >
-                  <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
-                    {card.title}
-                  </Heading>
-                  <Text fontSize={{ base: "md", lg: "lg" }} color="GrayText">
-                    {card.text}
-                  </Text>
-                </Stack>
-              </Container>
-            </Box>
+    <>
+      <Header />
+      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+        <Marquee pauseOnHover className="[--duration:20s]">
+          {firstRow.map((review, index) => (
+            <ReviewCard key={`${review.title}-${index}`} {...review} />
           ))}
-        </Slider>
-      </Box>
-    </section>
+        </Marquee>
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
+      </div>
+    </>
   );
 }
+
+const Header = () => {
+  return (
+    <div className="w-1/2 flex flex-col mx-auto text-center mt-20">
+      <h1 className="text-gray-800 font-bold text-4xl">Testimonial</h1>
+      <p className="text-sm font-normal text-gray-700 py-4">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium
+        quisquam fugit sint, tempore enim aspernatur fuga asperiores voluptate,
+        error ex excepturi similique iste odio et ipsum quibusdam commodi sit
+        distinctio!
+      </p>
+    </div>
+  );
+};

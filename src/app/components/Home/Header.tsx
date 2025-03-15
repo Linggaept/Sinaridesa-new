@@ -1,17 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
-"use client";
 import Link from "next/link";
-import AOS from "aos";
-import { useEffect } from "react";
-import "aos/dist/aos.css";
 
 export default function Header() {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
   return (
     <>
-      <section data-aos="fade-up" className="overflow-hidden mt-10 bg-red-300" id="home">
+      <section className="overflow-hidden  bg-red-300" id="home">
         <div className="bg-[url('/img/Wpp.jpg')] bg-cover bg-center">
           <div className="bg-gray-700/60 backdrop-invert backdrop-opacity-10 px-10 md:px-20 py-16">
             <div className="flex flex-col gap-6">
@@ -36,7 +29,7 @@ export default function Header() {
               </Link>
 
               <iframe
-                src="https://www.youtube.com/embed/5GQZlev447M?si=gppLmGQyqjfY6vku"
+                src="https://www.youtube.com/embed/5GQZlev447M?si=jb9CT0qi6MouKk4l"
                 className="w-full md:w-1/2 mx-auto h-48 md:h-96 rounded-3xl"
               ></iframe>
             </div>

@@ -1,6 +1,5 @@
 import "aos/dist/aos.css";
 import Head from "next/head";
-import BestProgram from "./components/Home/BestProgram";
 import Blockchain from "./components/Home/Blockchain";
 import Country3T from "./components/Home/Country3T";
 import Definition from "./components/Home/Definition";
@@ -16,6 +15,10 @@ import Traction from "./components/Home/Traction";
 import Value from "./components/Home/Value";
 import VisiMisi from "./components/Home/VisiMisi";
 import Footer from "./Footer";
+import Navbar from "./components/partials/Navbar";
+import { Sponsored } from "./components/Home/sponsored";
+import { Testimonial } from "./components/Home/Testimonial";
+import { BestProgram } from "./components/bestProgram";
 
 export default function Home() {
   return (
@@ -54,9 +57,10 @@ export default function Home() {
 
         <link rel="icon" href="/icon.png" type="image/png" sizes="32x32" />
       </Head>
-      <main>
-        {/* Navbar */}
 
+      <main className="w-full">
+        {/* Navbar */}
+        <Navbar />
         {/* LayAi */}
 
         <div className="bg-white">
@@ -101,8 +105,11 @@ export default function Home() {
           {/* Best Program */}
           <BestProgram />
 
-          {/* Testimonial */}
+          {/* Sponsored */}
+          <Sponsored />
 
+          {/* Testimonial */}
+          <Testimonial />
           {/* Mentor */}
           <Mentor />
 
