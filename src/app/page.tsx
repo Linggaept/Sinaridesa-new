@@ -18,8 +18,8 @@ import Footer from "./Footer";
 import Navbar from "./components/partials/Navbar";
 import { Sponsored } from "./components/Home/sponsored";
 import { AiSinari } from "./components/aiSinari";
-import { Testimonial } from "./components/Home/testimonial";
 import BestProgram from "./components/Home/bestProgram";
+import { Testimonial } from "./components/Home/testimonial";
 
 export default function Home() {
   return (
