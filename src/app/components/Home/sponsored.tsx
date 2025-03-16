@@ -50,8 +50,8 @@ const ReviewCard = ({ img }: { img: string }) => {
       <div className="flex justify-center items-center w-full h-full">
         <Image
           className="w-full h-auto object-contain"
-          width={150} // Bisa sesuaikan width & height sebagai default ukuran
-          height={120}
+          width={100} // Bisa sesuaikan width & height sebagai default ukuran
+          height={100}
           alt={img}
           src={img}
         />
@@ -62,13 +62,13 @@ const ReviewCard = ({ img }: { img: string }) => {
 
 const Header = () => {
   return (
-    <div className="w-1/2 flex flex-col mx-auto text-center mt-10">
+    <div className="w-3/4 md:w-1/2 flex flex-col mx-auto text-center mt-10">
       <h1 className="text-gray-800 font-bold text-4xl">Support</h1>
       <p className="text-sm font-normal text-gray-700 py-4">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium
-        quisquam fugit sint, tempore enim aspernatur fuga asperiores voluptate,
-        error ex excepturi similique iste odio et ipsum quibusdam commodi sit
-        distinctio!
+        Sinari Desa didukung oleh berbagai platform, institusi, dan komunitas
+        yang berkomitmen dalam mendukung pengembangan keterampilan anak muda di
+        desa. Bersama mitra strategis, kami menciptakan ekosistem belajar yang
+        inovatif dan berkelanjutan.
       </p>
     </div>
   );
@@ -77,16 +77,18 @@ const Header = () => {
 export function Sponsored() {
   return (
     <>
-      <Header />
-      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-        <Marquee pauseOnHover className="[--duration:20s]">
-          {firstRow.map((review, index) => (
-            <ReviewCard key={`${review.img}-${index}`} {...review} />
-          ))}
-        </Marquee>
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
-      </div>
+      <section id="Support" className="scroll-mb-14 md:scroll-mt-0 py-4">
+        <Header />
+        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+          <Marquee pauseOnHover className="[--duration:20s]">
+            {firstRow.map((review, index) => (
+              <ReviewCard key={`${review.img}-${index}`} {...review} />
+            ))}
+          </Marquee>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
+        </div>
+      </section>
     </>
   );
 }

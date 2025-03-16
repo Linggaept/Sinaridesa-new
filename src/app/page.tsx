@@ -17,8 +17,9 @@ import VisiMisi from "./components/Home/VisiMisi";
 import Footer from "./Footer";
 import Navbar from "./components/partials/Navbar";
 import { Sponsored } from "./components/Home/sponsored";
-import { Testimonial } from "./components/Home/Testimonial";
-import { BestProgram } from "./components/bestProgram";
+import { AiSinari } from "./components/aiSinari";
+import { Testimonial } from "./components/Home/testimonial";
+import BestProgram from "./components/Home/bestProgram";
 
 export default function Home() {
   return (
@@ -62,6 +63,7 @@ export default function Home() {
         {/* Navbar */}
         <Navbar />
         {/* LayAi */}
+        <AiSinari />
 
         <div className="bg-white">
           {/* Header */}

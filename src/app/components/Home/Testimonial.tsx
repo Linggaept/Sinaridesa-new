@@ -46,7 +46,7 @@ const ReviewCard = ({ title, text }: { title: string; text: string }) => {
             <figcaption className="text-lg font-medium dark:text-white">
               {title}
             </figcaption>
-            <blockquote className="mt-2 text-sm text-gray-800">
+            <blockquote className="mt-2 text-sm text-gray-800 text-justify">
               {text}
             </blockquote>
           </div>
@@ -75,13 +75,12 @@ export function Testimonial() {
 
 const Header = () => {
   return (
-    <div className="w-1/2 flex flex-col mx-auto text-center mt-20">
+    <div className="w-3/4 md:w-1/2 flex flex-col mx-auto text-center mt-20">
       <h1 className="text-gray-800 font-bold text-4xl">Testimonial</h1>
       <p className="text-sm font-normal text-gray-700 py-4">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium
-        quisquam fugit sint, tempore enim aspernatur fuga asperiores voluptate,
-        error ex excepturi similique iste odio et ipsum quibusdam commodi sit
-        distinctio!
+        Pendapat mereka yang telah merasakan manfaat Sinari Desa dalam
+        meningkatkan kesejahteraan masyarakat, memberikan solusi inovatif, dan
+        mendukung perkembangan desa menuju masa depan yang lebih baik.
       </p>
     </div>
   );

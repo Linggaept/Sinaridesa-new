@@ -30,6 +30,10 @@ const navItem: Array<{ label: string; href: string }> = [
     href: "/#Courses",
   },
   {
+    label: "Support",
+    href: "/#Support",
+  },
+  {
     label: "Mentor",
     href: "/#Mentor",
   },
@@ -42,7 +46,7 @@ const navItem: Array<{ label: string; href: string }> = [
 export default function Component() {
   return (
     <div className="bg-green-700 w-full h-16">
-      <header className="fixed z-50 flex h-16 w-full shrink-0 items-center px-4 md:px-6 bg-linear-to-r from-green-900/85 to-green-800/90 backdrop-blur-sm">
+      <header className="fixed z-50 flex h-16 w-full shrink-0 items-center px-4 md:px-6 bg-linear-to-r from-green-900/85 to-green-900/90 backdrop-blur-sm">
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="outline" size="icon" className="lg:hidden">
@@ -92,7 +96,7 @@ export default function Component() {
             <Link
               key={index}
               href={item.href}
-              className="group inline-flex h-9 w-max items-center justify-center rounded-md text-white px-4 py-2 text-sm font-medium transition-colors hover:bg-green-900 hover:text-white focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-gray-100/50 "
+              className="group inline-flex h-9 w-max items-center justify-center rounded-md text-white px-4 py-2 text-sm font-medium transition-colors hover:bg-green-900 hover:text-whitez disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-gray-100/50 "
               prefetch={false}
             >
               {item.label}

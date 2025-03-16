@@ -35,7 +35,7 @@ export default function VisiMisi() {
               <h1 className="text-green-700 font-bold text-3xl md:text-5xl text-center md:text-left">
                 Visi & Misi
               </h1>
-              <p className="text-gray-600 font-normal text-xs md:text-xl text-center md:text-left">
+              <p className="text-gray-600 font-normal text-xs md:text-xl text-justify md:text-justify">
                 Menjadi wadah bagi terbentuknya Ekosistem Pertumbuhan Pemuda
                 Desa, dengan mendorong tercipta & terlahirnya 1.000.000 Karya,
                 Penulis, Trainer Muda, & Future Leaders (The Problem Solver) di
@@ -54,7 +54,7 @@ export default function VisiMisi() {
                   </span>{" "}
                   Good Emporing Youth Community
                 </h1>
-                <h1 className="flex p-4 w-full text-center bg-green-700 text-white font-normal items-center text-xs md:text-sm rounded-2xl w-46 md:max-w-[13rem]">
+                <h1 className="flex p-4 text-center bg-green-700 text-white font-normal items-center text-xs md:text-sm rounded-2xl w-46 md:max-w-[13rem]">
                   <span>
                     <TbAward className="w-6 h-6 md:w-10 md:h-10 mr-2 font-bold text-white" />
                   </span>{" "}

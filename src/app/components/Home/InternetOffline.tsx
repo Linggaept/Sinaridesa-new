@@ -11,9 +11,9 @@ const InternetOffline = () => {
       >
         <div className="flex flex-col gap-10">
           <div className="">
-            <h1 className="text-black text-3xl font-semibold">
+            <h1 className="text-black text-3xl font-bold">
               Internet Offline{" "}
-              <span className="text-green-700 text-3xl font-semibold">
+              <span className="text-green-700 text-3xl font-bold">
                 Sinari Desa
               </span>
             </h1>
@@ -26,17 +26,17 @@ const InternetOffline = () => {
           </div>
           <div className="">
             <Image
-              src={"/img/flashdisk.png"}
+              src={"/img/iot-sinaridesa.png"}
               alt="Belajar di desa"
               width={800}
               height={800}
-              className="rounded-3xl ratio-square object-cover mx-auto"
+              className="rounded-3xl ratio-square object-cover mx-auto hover:scale-105 cursor-pointer duration-300"
             />
           </div>
 
           <div className="w-full flex items-center justify-center">
             <Link href="https://wa.me/6285726631291" target="_blank">
-              <button className="bg-cyan-400 hover:bg-cyan-300 duration-300 hover:shadow-lg text-white px-4 py-2 md:py-4 rounded-md shadow-md w-44 md:w-56 md:text-md text-sm">
+              <button className="bg-cyan-400 font-semibold cursor-pointer focus:outline-none hover:bg-cyan-300 duration-300 hover:shadow-lg text-white px-4 py-2 md:py-4 rounded-md shadow-md w-44 md:w-56 md:text-md text-sm">
                 Pesan Sekarang
               </button>
             </Link>
