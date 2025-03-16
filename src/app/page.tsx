@@ -17,9 +17,9 @@ import VisiMisi from "./components/Home/VisiMisi";
 import Footer from "./Footer";
 import Navbar from "./components/partials/Navbar";
 import { AiSinari } from "./components/aiSinari";
-import BestProgram from "./components/Home/bestProgram";
+import BestProgram from "./components/Home/BestProgram";
 import Sponsored from "./components/Home/sponsored";
-import Testimonial from "./components/Home/testimonial";
+import Testimonial from "./components/Home/Testimonial";
 
 export default function Home() {
   return (
