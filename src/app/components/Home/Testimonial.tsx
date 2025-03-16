@@ -56,7 +56,7 @@ const ReviewCard = ({ title, text }: { title: string; text: string }) => {
   );
 };
 
-export function Testimonial() {
+export default function Testimonial() {
   return (
     <>
       <Header />

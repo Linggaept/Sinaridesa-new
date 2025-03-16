@@ -74,7 +74,7 @@ const Header = () => {
   );
 };
 
-export function Sponsored() {
+export default function Sponsored() {
   return (
     <>
       <section id="Support" className="scroll-mb-14 md:scroll-mt-0 py-4">
