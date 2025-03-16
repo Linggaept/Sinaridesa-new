@@ -18,7 +18,7 @@ import Footer from "./Footer";
 import Navbar from "./components/partials/Navbar";
 import { AiSinari } from "./components/aiSinari";
 import BestProgram from "./components/Home/bestProgram";
-import Sponsored from "./components/Home/sponsored";
+import Sponsored from "./components/Home/Sponsored";
 import Testimonial from "./components/Home/testimonial";
 
 export default function Home() {
