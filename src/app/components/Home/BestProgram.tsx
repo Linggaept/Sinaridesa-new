@@ -10,7 +10,7 @@ export default function BestProgram() {
   return (
     <>
       <div className="flex flex-col w-full mx-auto justify-center">
-        <h1 className="text-gray-900 text-2xl md:text-4xl mb-4 font-bold text-center mt-10 md:mt-10">
+        <h1 className="text-gray-900 text-3xl md:text-4xl mb-4 font-bold text-center mt-10 md:mt-10">
           Program Unggulan Kami
         </h1>
         <p className="text-sm font-normal text-gray-700 pb-4 items-center justify-center text-center w-1/2 mx-auto">

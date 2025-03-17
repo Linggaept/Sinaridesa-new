@@ -42,25 +42,25 @@ export default function VisiMisi() {
                 Desa yang memiliki Kualitas, Kapasitas, & Kapabilitas :
               </p>
               <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 text-center md:text-left">
-                <h1 className="flex p-4 bg-green-700 text-white font-normal items-center text-xs md:text-sm rounded-2xl w-46 md:max-w-[13rem]">
+                <h1 className="flex p-4 bg-green-700 text-white font-normal items-center text-xs md:text-sm rounded-2xl w-full justify-center md:max-w-[13rem]">
                   <span>
                     <LiaHandshake className="w-6 h-6 md:w-10 md:h-10 mr-2" />
                   </span>{" "}
                   As Good Communicator
                 </h1>
-                <h1 className="flex p-4 bg-green-700 items-center text-white font-normal text-xs md:text-sm rounded-2xl w-46 md:max-w-[13rem]">
+                <h1 className="flex p-4 bg-green-700 items-center text-white font-normal text-xs md:text-sm rounded-2xl w-full justify-center md:max-w-[13rem]">
                   <span>
                     <LiaLaptopSolid className="w-6 h-6 md:w-10 md:h-10 mr-2" />
                   </span>{" "}
                   Good Emporing Youth Community
                 </h1>
-                <h1 className="flex p-4 text-center bg-green-700 text-white font-normal items-center text-xs md:text-sm rounded-2xl w-46 md:max-w-[13rem]">
+                <h1 className="flex p-4 text-center bg-green-700 text-white font-normal items-center text-xs md:text-sm rounded-2xl w-full justify-center md:max-w-[13rem]">
                   <span>
                     <TbAward className="w-6 h-6 md:w-10 md:h-10 mr-2 font-bold text-white" />
                   </span>{" "}
                   Good Literation
                 </h1>
-                <h1 className="flex p-4 bg-green-700 items-center text-white font-normal text-xs md:text-sm rounded-2xl w-46 md:max-w-[13rem]">
+                <h1 className="flex p-4 bg-green-700 items-center text-white font-normal text-xs md:text-sm rounded-2xl w-full justify-center md:max-w-[13rem]">
                   <span>
                     <IoPeopleOutline className="w-6 h-6 md:w-10 md:h-10 mr-2" />
                   </span>{" "}

@@ -5,7 +5,7 @@ export default function Traction() {
       <section>
         <div className="w-full bg-green-700 p-20 flex flex-col gap-8">
           <h1 className="text-white text-xl md:text-3xl text-center w-full md:w-3/4 mx-auto font-bold">
-            SINARI DESA "The Leadership Institute" Telah Dipercaya
+            Sinari Desa "The Leadership Institute" Telah Dipercaya
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-4 w-11/12 mx-auto gap-4 md:gap-0">
             <div className="flex flex-col bg-yellow-500 bg-opacity-90 p-4 rounded-xl w-11/12 items-center justify-center">

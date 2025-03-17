@@ -55,7 +55,7 @@ const LearningBook = () => {
           <h1 className="text-md font-normal text-center">Top Courses</h1>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 mt-10">
+        <div className="grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-3 gap-5 mt-10">
           {Cards.map((card, index) => (
             <div key={index} className="bg-gray-100 shadow-md p-2 rounded-md">
               <div className="flex flex-col gap-5">
@@ -68,14 +68,14 @@ const LearningBook = () => {
                 />
                 <div className="flex flex-col">
                   <h1 className="text-gray-700 text-xs">{card.owner}</h1>
-                  <h1 className="text-gray-700 text-md font-semibold h-20 overflow-y-auto w-3/4">
+                  <h1 className="text-gray-700 text-sm md:text-md font-semibold h-16 md:h-20 overflow-y-auto w-full md:w-3/4">
                     {card.title}
                   </h1>
                 </div>
                 <div className="">
                   <Link href={"/#Courses"}>
-                    <div className="mt-4 bg-green-700 rounded-md w-1/2 cursor-pointer hover:bg-green-600 duration-300">
-                      <h1 className="text-sm text-white font-normal text-center p-4">
+                    <div className="mt-4 bg-green-700 rounded-md w-full md:w-1/2 cursor-pointer hover:bg-green-600 duration-300">
+                      <h1 className="text-sm text-white font-normal text-center p-2 md:p-4">
                         Course Detail
                       </h1>
                     </div>
