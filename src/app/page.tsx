@@ -56,7 +56,7 @@ export default function Home() {
         {/* Additional SEO optimizations */}
         <meta name="author" content="SinariDesa Team" />
 
-        <link rel="icon" href="/icon.png" type="image/png" sizes="32x32" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="32x32" />
       </Head>
 
       <main className="w-full">

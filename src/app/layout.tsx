@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Sinari Desa - Dari Desa Untuk Dunia!",
+  icons: "/favicon.ico",
   description:
     "Sinari Desa adalah sebuah platform TIK inovatif yang berfokus pada peningkatan keterampilan dan pengembangan diri anak-anak muda di desa",
   keywords: [
