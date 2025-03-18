@@ -46,7 +46,7 @@ export default function Home() {
           content="SinariDesa adalah platform TIK inovatif yang membantu anak-anak muda di desa mengembangkan keterampilan mereka melalui teknologi seperti blockchain, AI, dan Internet offline."
         />
         <meta property="og:url" content="https://sinaridesa.com" />
-        <meta property="og:image" content="/img/Logo_PNB_Sinaridesa.png" />
+        <meta property="og:image" content="/favicon.ico" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="SinariDesa" />
 
