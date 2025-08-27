@@ -1,5 +1,7 @@
 import "aos/dist/aos.css";
 import Head from "next/head";
+import { AiSinari } from "./components/aiSinari";
+import BestProgram from "./components/Home/BestProgram";
 import Blockchain from "./components/Home/Blockchain";
 import Country3T from "./components/Home/Country3T";
 import Definition from "./components/Home/Definition";
@@ -7,19 +9,18 @@ import Header from "./components/Home/Header";
 import InternetOffline from "./components/Home/InternetOffline";
 import LearningBook from "./components/Home/LearningBook";
 import Mentor from "./components/Home/Mentor";
+import ProgramUnggulan from "./components/Home/ProgramUnggulan";
 import SmartAI from "./components/Home/SmartAI";
+import Sponsored from "./components/Home/sponsored";
 import Superiority from "./components/Home/Superiority";
 import Support from "./components/Home/Support";
 import TabelAi from "./components/Home/TabelAi";
+import Testimonial from "./components/Home/Testimonial";
 import Traction from "./components/Home/Traction";
 import Value from "./components/Home/Value";
 import VisiMisi from "./components/Home/VisiMisi";
-import Footer from "./Footer";
 import Navbar from "./components/partials/Navbar";
-import { AiSinari } from "./components/aiSinari";
-import BestProgram from "./components/Home/BestProgram";
-import Sponsored from "./components/Home/sponsored";
-import Testimonial from "./components/Home/Testimonial";
+import Footer from "./Footer";
 
 export default function Home() {
   return (
@@ -68,6 +69,9 @@ export default function Home() {
         <div className="bg-white">
           {/* Header */}
           <Header />
+
+          {/* Program Unggulan */}
+          <ProgramUnggulan />
 
           {/* Value */}
           <Value />

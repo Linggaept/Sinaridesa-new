@@ -20,9 +20,8 @@ export default function Footer() {
                 <span>
                   <FaLocationDot className="text-yellow-500 w-10 h-10" />
                 </span>
-                Dusun Malangrejo RT 02 RW 33 Padukuhan Malangrejo , Wedomartani,
-                Kec. Ngemplak, Kabupaten Sleman, Daerah Istimewa Yogyakarta
-                55584
+                Jl. Anyelir 2 No. 278, Perumnas Condong Catur, Condongcatur,
+                Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55584
               </h1>
             </div>
             <div className="flex mt-4">
@@ -85,6 +84,12 @@ export default function Footer() {
               <h1 className="text-yellow-500 font-bold text-3xl mb-10">
                 Find Us
               </h1>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.08247561937605!2d110.40867776331855!3d-7.755886818157457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a599c2f2c63f1%3A0xce1a3e496ab94d2b!2sJl.%20Anyelir%202%20No.278%2C%20Perumnas%20Condong%20Catur%2C%20Condongcatur%2C%20Kec.%20Depok%2C%20Kabupaten%20Sleman%2C%20Daerah%20Istimewa%20Yogyakarta%2055281!5e0!3m2!1sid!2sid!4v1756273500523!5m2!1sid!2sid"
+                width="420"
+                height="220"
+                className="mb-4 rounded-2xl"
+              ></iframe>
               <div className="flex gap-4">
                 <div className="bg-blue-600 rounded-full p-3 cursor-pointer hover:bg-blue-500 duration-300 hover:scale-125">
                   <FaFacebook className="w-6 h-6 text-white" />

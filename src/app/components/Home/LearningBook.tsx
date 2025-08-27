@@ -10,32 +10,32 @@ const LearningBook = () => {
   const Cards: Card[] = [
     {
       img: "LearningBook_1",
-      owner: "KARRIER.MU",
+      owner: "Sinari Desa X SkillUpKids",
       title: "Merancang Strategi Pemasaran Sebagai Praktisi Pemasaran",
     },
     {
       img: "LearningBook_2",
-      owner: "KARRIER.MU",
+      owner: "Sinari Desa X SkillUpKids",
       title: "Memasarkan Produk bagi calon Spesialis Pemasaran Digital",
     },
     {
       img: "LearningBook_3",
-      owner: "KARRIER.MU",
+      owner: "Sinari Desa X SkillUpKids",
       title: "Mengelola Toko Online Di Marketplace Bagi Praktisi Pemasaran",
     },
     {
       img: "LearningBook_4",
-      owner: "KARRIER.MU",
+      owner: "Sinari Desa X SkillUpKids",
       title: "Merancang Copywriting Periklanan Bagi PraktisiPemasaran",
     },
     {
       img: "LearningBook_5",
-      owner: "KARRIER.MU",
+      owner: "Sinari Desa X SkillUpKids",
       title: "Berjualan online di marketplace bagi praktisi pemasaran",
     },
     {
       img: "LearningBook_6",
-      owner: "KARRIER.MU",
+      owner: "Sinari Desa X SkillUpKids",
       title: "Membuat Website Dan Toko Online Untuk Para Pelaku UMKM",
     },
   ];

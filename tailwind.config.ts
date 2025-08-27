@@ -15,6 +15,7 @@ const config: Config = {
         "marquee-vertical":
           "marquee-vertical var(--duration, 20s) linear infinite",
         shine: "shine 4s infinite linear",
+        "gentle-bounce": "gentle-bounce 2s infinite",
       },
       keyframes: {
         marquee: {
@@ -30,10 +31,20 @@ const config: Config = {
           "50%": { backgroundPosition: "100% 50%" },
           "100%": { backgroundPosition: "0% 50%" },
         },
+        "gentle-bounce": {
+          "0%, 100%": {
+            transform: "translateY(-10%)",
+            animationTimingFunction: "cubic-bezier(0.8, 0, 1, 1)",
+          },
+          "50%": {
+            transform: "translateY(0)",
+            animationTimingFunction: "cubic-bezier(0, 0, 0.2, 1)",
+          },
+        },
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 
 export default config;
