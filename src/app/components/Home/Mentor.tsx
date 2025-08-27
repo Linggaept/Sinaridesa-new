@@ -104,6 +104,11 @@ const Mentor = () => {
       name: "Ridho Karunia Setiawan",
       eks: "png",
     },
+    {
+      img: "Mentor_12",
+      name: "Faud Dwi Hasan",
+      eks: "jpeg",
+    },
   ];
 
   return (
