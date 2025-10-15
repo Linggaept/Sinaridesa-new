@@ -1,9 +1,11 @@
+"use client";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { JSX, SVGProps } from "react";
 import Image from "next/image";
 import NeedUs from "../needUs";
+import LogoutButton from "./LogoutButton";
 
 const navItem: Array<{ label: string; href: string }> = [
   {
@@ -23,12 +25,16 @@ const navItem: Array<{ label: string; href: string }> = [
     href: "/#SmartAi",
   },
   {
-    label: "Blockchain",
+    label: "Certificate",
     href: "/#Blockchain",
   },
   {
     label: "Courses",
     href: "/#Courses",
+  },
+  {
+    label: "Events",
+    href: "/#Events",
   },
   {
     label: "Support",
@@ -44,7 +50,7 @@ const navItem: Array<{ label: string; href: string }> = [
   },
 ];
 
-export default function Component() {
+export default function Component({ token }: { token?: string }) {
   return (
     <>
       <div className="bg-green-700 w-full h-16">
@@ -81,6 +87,18 @@ export default function Component() {
                     {item.label}
                   </Link>
                 ))}
+
+                {token ? (
+                  <LogoutButton />
+                ) : (
+                  <Link
+                    href={"/signin"}
+                    className="flex w-full items-center px-4 py-2 text-lg font-semibold"
+                    prefetch={false}
+                  >
+                    Sign In
+                  </Link>
+                )}
               </div>
             </SheetContent>
           </Sheet>
@@ -104,6 +122,15 @@ export default function Component() {
                 {item.label}
               </Link>
             ))}
+            {token ? (
+              <LogoutButton />
+            ) : (
+              <Link
+                href={"/signin"}
+                className="group inline-flex h-9 w-max items-center justify-center rounded-md text-white px-4 py-2 text-sm font-bold transition-colors hover:bg-yellow-700 hover:text-whitez disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-gray-100/50 bg-yellow-600"
+                prefetch={false}
+              >Sign In</Link>
+            )}
           </nav>
         </header>
       </div>

@@ -1,6 +1,10 @@
+import ConditionalLayout from "@/components/layout/conditionalLayout";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+// import { Toaster } from "sonner";
+import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
+import { cookies } from "next/headers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,11 +34,14 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies();
+  const token = cookieStore.get("token")?.value;
+  
   return (
     <html
       lang="en"
@@ -45,7 +52,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ConditionalLayout token={token}>
+          {children}
+        </ConditionalLayout>
+        <Toaster />
       </body>
     </html>
   );

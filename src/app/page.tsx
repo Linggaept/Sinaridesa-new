@@ -1,10 +1,11 @@
 import "aos/dist/aos.css";
 import Head from "next/head";
-import { AiSinari } from "./components/aiSinari";
+// import { AiSinari } from "./components/aiSinari";
 import BestProgram from "./components/Home/BestProgram";
 import Blockchain from "./components/Home/Blockchain";
 import Country3T from "./components/Home/Country3T";
 import Definition from "./components/Home/Definition";
+import EventsPage from "./components/Home/Events";
 import Header from "./components/Home/Header";
 import InternetOffline from "./components/Home/InternetOffline";
 import LearningBook from "./components/Home/LearningBook";
@@ -19,7 +20,6 @@ import Testimonial from "./components/Home/Testimonial";
 import Traction from "./components/Home/Traction";
 import Value from "./components/Home/Value";
 import VisiMisi from "./components/Home/VisiMisi";
-import Navbar from "./components/partials/Navbar";
 import Footer from "./Footer";
 
 export default function Home() {
@@ -61,10 +61,8 @@ export default function Home() {
       </Head>
 
       <main className="w-full">
-        {/* Navbar */}
-        <Navbar />
         {/* LayAi */}
-        <AiSinari />
+        {/* <AiSinari /> */}
 
         <div className="bg-white">
           {/* Header */}
@@ -104,6 +102,9 @@ export default function Home() {
 
           {/* LearningBook */}
           <LearningBook />
+
+          {/* Events */}
+          <EventsPage />
 
           {/* Traction */}
           <Traction />

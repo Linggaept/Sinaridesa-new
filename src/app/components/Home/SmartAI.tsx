@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const SmartAI = () => {
@@ -76,15 +77,13 @@ const SmartAI = () => {
                 </div>
 
                 <div
-                  className="bg-indigo-600 rounded-md w-full md:w-7/12 hover:bg-white hover:border-2 hover:border-indigo-600 duration-300 cursor-help"
+                  className="bg-indigo-600 rounded-md w-full md:w-7/12  py-4 hover:border-2 hover:border-indigo-600 duration-300 text-center"
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <h1 className="text-sm text-white hover:text-indigo-600 font-normal text-center p-4 hover:font-bold ">
-                    {hovered
-                      ? "Click Icon Pojok Kanan Bawah"
-                      : "Coba Gratis Sekarang"}
-                  </h1>
+                  <Link href={'/chat'} className="text-sm text-white text-center font-normal p-4 hover:font-bold ">
+                    Coba Gratis Sekarang
+                  </Link>
                 </div>
               </div>
             </div>

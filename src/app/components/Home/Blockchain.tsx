@@ -1,12 +1,55 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
+import { verifyCertificate } from "@/app/services/certificateService";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Spinner } from "@/components/ui/spinner";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef, useState } from "react";
 import { IoMdCheckmarkCircle } from "react-icons/io";
-import { useRef } from "react";
+import { toast } from "sonner";
 
 const Blockchain = () => {
   const linkRef = useRef<HTMLDivElement>(null);
+  const [hash, setHash] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [result, setResult] = useState<any>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setResult(null);
+    setError(null);
+
+    try {
+      const response = await verifyCertificate(hash);
+      if (response.valid) {
+        setResult(response.certificate);
+        toast.success("Sertifikat anda asli");
+      } else {
+        setError("Sertifikat tidak valid.");
+        toast.error("Sertifikat tidak valid.");
+      }
+    } catch (err) {
+      setError("Gagal memverifikasi sertifikat. Silakan coba lagi.");
+      toast.error("Gagal memverifikasi sertifikat.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <>
@@ -59,13 +102,66 @@ const Blockchain = () => {
                   mudah diintegrasikan.
                 </h1>
 
-                <div className="mt-4 bg-green-700 rounded-md w-full md:w-7/12 hover:bg-green-600 duration-300">
-                  <a href="#CekSertifikat">
-                    <h1 className="text-sm text-white font-normal text-center p-4">
-                      Cek Sertifikatmu
-                    </h1>
-                  </a>
-                </div>
+                <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+                  <DialogTrigger asChild>
+                    <div className="mt-4 bg-green-700 rounded-md w-full md:w-7/12 hover:bg-green-600 duration-300 cursor-pointer">
+                      <h1 className="text-sm text-white font-normal text-center p-4">
+                        Cek Sertifikatmu
+                      </h1>
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-[425px]">
+                    <DialogHeader>
+                      <DialogTitle>Verifikasi Sertifikat</DialogTitle>
+                    </DialogHeader>
+                    <form onSubmit={handleSubmit}>
+                      <div className="grid gap-4 py-4">
+                        <div className="grid grid-cols-4 items-center gap-4">
+                          <Label htmlFor="hash" className="text-right">
+                            Hash
+                          </Label>
+                          <Input
+                            id="hash"
+                            value={hash}
+                            onChange={(e) => setHash(e.target.value)}
+                            className="col-span-3"
+                            placeholder="Masukkan kode hash sertifikat Anda"
+                          />
+                        </div>
+                      </div>
+                      <DialogFooter>
+                        <DialogClose asChild>
+                          <Button type="button" variant="secondary">
+                            Batal
+                          </Button>
+                        </DialogClose>
+                        <Button type="submit" disabled={isLoading} className="bg-green-700 hover:bg-green-600">
+                          {isLoading ? <Spinner /> : "Verifikasi"}
+                        </Button>
+                      </DialogFooter>
+                    </form>
+                    {result && (
+                      <div className="mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded">
+                        <h3 className="font-bold">Sertifikat Ditemukan!</h3>
+                        <p>
+                          <strong>Nama:</strong> {result.name}
+                        </p>
+                        <p>
+                          <strong>Acara:</strong> {result.event.title}
+                        </p>
+                        <p>
+                          <strong>Tanggal Terbit:</strong>{" "}
+                          {new Date(result.issued_at).toLocaleDateString()}
+                        </p>
+                      </div>
+                    )}
+                    {error && (
+                      <div className="mt-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded">
+                        <p>{error}</p>
+                      </div>
+                    )}
+                  </DialogContent>
+                </Dialog>
               </div>
             </div>
 

@@ -21,7 +21,7 @@ if (!apiKey) {
   throw new Error("Missing OpenAI API key");
 }
 const genAI = new GoogleGenerativeAI(apiKey);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+const model = genAI.getGenerativeModel({ model: "gemini-2.5-pro" });
 
 const generationConfig = {
   temperature: 1,
@@ -103,7 +103,9 @@ export function AiSinari() {
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle className="text-gray-800 font-bold">Sinari Desa Ai</DialogTitle>
+          <DialogTitle className="text-gray-800 font-bold">
+            Sinari Desa Ai
+          </DialogTitle>
           <DialogDescription className="h-[70vh] overflow-hidden overflow-y-auto pr-4">
             {showTextAi ? (
               <Pengembangan messages={messages} />
@@ -135,10 +137,7 @@ export function AiSinari() {
           </DialogDescription>
         </DialogHeader>
         <DialogFooter>
-          <form
-            onSubmit={handleSubmit}
-            className="flex w-full"
-          >
+          <form onSubmit={handleSubmit} className="flex w-full">
             <div className="flex w-full gap-2">
               <textarea
                 placeholder="Tanya apa saja..."
@@ -222,8 +221,12 @@ const Pengembangan = ({
                 <div className="prose prose-sm max-w-none text-black">
                   <ReactMarkdown
                     remarkPlugins={[remarkGfm]}
-                    components={{ p: ({...props}) => <p className="my-0" {...props} /> }}
-                  >{msg.ai}</ReactMarkdown>
+                    components={{
+                      p: ({ ...props }) => <p className="my-0" {...props} />,
+                    }}
+                  >
+                    {msg.ai}
+                  </ReactMarkdown>
                 </div>
               ) : (
                 <Spinner size="small" />
