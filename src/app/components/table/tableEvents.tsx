@@ -262,7 +262,7 @@ export function EventsTable() {
                     <div className="size-16 rounded-md bg-muted flex items-center justify-center overflow-hidden">
                       {row.thumbnail ? (
                         <Image
-                          src={`http://20.6.8.101/${row.thumbnail}`}
+                          src={`https://api.sinaridesa.com/${row.thumbnail}`}
                           alt={row.title}
                           className="size-full object-cover"
                           width={64}
@@ -374,7 +374,7 @@ export function EventsTable() {
                 <div className="aspect-square relative rounded-md overflow-hidden">
                   {detailRow.thumbnail ? (
                     <Image
-                      src={`http://20.6.8.101/${detailRow.thumbnail}`}
+                      src={`https://api.sinaridesa.com/${detailRow.thumbnail}`}
                       alt={detailRow.title}
                       layout="fill"
                       className="object-cover"

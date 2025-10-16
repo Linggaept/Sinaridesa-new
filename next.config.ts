@@ -27,6 +27,11 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
+        hostname: "api.sinaridesa.com",
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
         hostname: '**.sinaridesa.com',
       },
     ],

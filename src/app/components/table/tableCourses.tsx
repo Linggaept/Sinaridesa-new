@@ -258,7 +258,7 @@ export function CoursesTable() {
                     <div className="size-16 rounded-md bg-muted flex items-center justify-center overflow-hidden">
                       {row.thumbnail ? (
                         <Image
-                          src={`http://20.6.8.101/${row.thumbnail}`}
+                          src={`https://api.sinaridesa.com/${row.thumbnail}`}
                           alt={row.title}
                           className="size-full object-cover"
                           width={64}
@@ -379,7 +379,7 @@ export function CoursesTable() {
               {detailRow.thumbnail && (
                 <div className="flex items-center justify-center">
                   <Image
-                    src={`http://20.6.8.101/${detailRow.thumbnail}`}
+                    src={`https://api.sinaridesa.com/${detailRow.thumbnail}`}
                     alt={detailRow.title}
                     className="max-h-48 rounded-md object-cover"
                     width={500}
@@ -419,7 +419,7 @@ export function CoursesTable() {
                   size="sm"
                   onClick={() =>
                     window.open(
-                      `http://20.6.8.101/${detailRow.filePath}`,
+                      `https://api.sinaridesa.com/${detailRow.filePath}`,
                       "_blank"
                     )
                   }

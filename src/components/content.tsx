@@ -11,7 +11,7 @@ export const Content = ({ description, image }: BlogContentProps) => {
       {image && (
         <div className="bg-muted aspect-video w-full overflow-hidden rounded-xl">
           <Image
-            src={`http://20.6.8.101/${image}`}
+            src={`https://api.sinaridesa.com/${image}`}
             alt="Blog cover"
             className="h-full w-full object-cover"
             width={800}

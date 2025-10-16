@@ -55,7 +55,7 @@ const EventsList = ({ events, loading, grid }: { events: Event[], loading: boole
                     className="transition-opacity duration-200 fade-in hover:opacity-70"
                   >
                     <Image
-                      src={"http://20.6.8.101/" + card.thumbnail}
+                      src={"https://api.sinaridesa.com/" + card.thumbnail}
                       width={400}
                       height={225}
                       alt={card.title}

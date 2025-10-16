@@ -86,7 +86,7 @@ const MentorClientPage = () => {
                   >
                     <div className="mx-auto bg-green-800 p-2 rounded-full">
                       <Image
-                        src={`http://20.6.8.101/${member.picture}`}
+                        src={`https://api.sinaridesa.com/${member.picture}`}
                         alt="Belajar di desa"
                         width={180}
                         height={180}
@@ -135,7 +135,7 @@ const MentorClientPage = () => {
                   >
                     <div className="mx-auto bg-green-800 p-2 rounded-full">
                       <Image
-                        src={`http://20.6.8.101/${member.picture}`}
+                        src={`https://api.sinaridesa.com/${member.picture}`}
                         alt="Belajar di desa"
                         width={180}
                         height={180}

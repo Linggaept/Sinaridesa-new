@@ -37,7 +37,7 @@ const CoursesList = ({ courses, loading }: { courses: Course[], loading: boolean
               <div className="bg-gray-100 shadow-md p-2 rounded-md">
                 <div className="flex flex-col gap-5">
                   <Image
-                    src={`http://20.6.8.101/${card.thumbnail}`}
+                    src={`https://api.sinaridesa.com/${card.thumbnail}`}
                     width={200}
                     height={200}
                     alt={card.title}

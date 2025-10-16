@@ -264,7 +264,7 @@ export function TeamsTable() {
                     <div className="size-16 rounded-md bg-muted flex items-center justify-center overflow-hidden">
                       {row.picture ? (
                         <Image
-                          src={`http://20.6.8.101/${row.picture}`}
+                          src={`https://api.sinaridesa.com/${row.picture}`}
                           alt={row.name}
                           className="size-full object-cover"
                           width={64}
@@ -366,7 +366,7 @@ export function TeamsTable() {
                 <div className="aspect-square relative rounded-md overflow-hidden">
                   {detailRow.picture ? (
                     <Image
-                      src={`http://20.6.8.101/${detailRow.picture}`}
+                      src={`https://api.sinaridesa.com/${detailRow.picture}`}
                       alt={detailRow.name}
                       layout="fill"
                       className="object-cover"

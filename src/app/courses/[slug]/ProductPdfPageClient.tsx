@@ -34,8 +34,8 @@ export default function ProductPdfPageClient({ slug }: { slug: string }) {
     fetchPdf();
   }, [slug]);
 
-  const pdfUrl = pdf ? `http://20.6.8.101/${pdf.filePath}` : "";
-  const thumbnailUrl = pdf ? `http://20.6.8.101/${pdf.thumbnail}` : "";
+  const pdfUrl = pdf ? `https://api.sinaridesa.com/${pdf.filePath}` : "";
+  const thumbnailUrl = pdf ? `https://api.sinaridesa.com/${pdf.thumbnail}` : "";
 
   return (
     <main className="container mx-auto max-w-6xl px-4 py-20">
