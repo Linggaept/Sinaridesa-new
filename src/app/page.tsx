@@ -21,6 +21,7 @@ import Traction from "./components/Home/Traction";
 import Value from "./components/Home/Value";
 import VisiMisi from "./components/Home/VisiMisi";
 import Footer from "./Footer";
+import { CollapsibleGallery } from "./components/Home/Galeri";
 
 export default function Home() {
   return (
@@ -91,6 +92,7 @@ export default function Home() {
 
           {/* InternetOffline */}
           <InternetOffline />
+          
           {/* Belajar Cerdas */}
           <SmartAI />
 
@@ -106,6 +108,9 @@ export default function Home() {
           {/* Events */}
           <EventsPage />
 
+          {/* Gallery */}
+          <CollapsibleGallery />
+
           {/* Traction */}
           <Traction />
 
@@ -117,6 +122,7 @@ export default function Home() {
 
           {/* Testimonial */}
           <Testimonial />
+
           {/* Mentor */}
           <Mentor />
 

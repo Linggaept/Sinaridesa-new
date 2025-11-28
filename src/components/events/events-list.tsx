@@ -37,7 +37,7 @@ const EventCardSkeleton = () => (
 
 const EventsList = ({ events, loading, grid }: { events: Event[], loading: boolean, grid?: number }) => {
   return (
-    <div className={`grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-${grid} gap-5 mt-10`}>
+    <div className={`grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-${grid} gap-5 mt-10`}>
       {loading
         ? Array.from({ length: 6 }).map((_, index) => (
             <EventCardSkeleton key={index} />
