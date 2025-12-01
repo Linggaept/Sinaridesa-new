@@ -120,11 +120,6 @@ export default function Home() {
           {/* Gallery */}
           <CollapsibleGallery />
 
-          {/* Traction */}
-          <Traction />
-
-          {/* Best Program */}
-          <BestProgram />
 
           {/* Sponsored */}
           <Sponsored />
