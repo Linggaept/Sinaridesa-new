@@ -22,6 +22,7 @@ import Value from "./components/Home/Value";
 import VisiMisi from "./components/Home/VisiMisi";
 import Footer from "./Footer";
 import { CollapsibleGallery } from "./components/Home/Galeri";
+import Dampak from "./components/Home/Dampak";
 
 export default function Home() {
   return (
@@ -58,7 +59,12 @@ export default function Home() {
         {/* Additional SEO optimizations */}
         <meta name="author" content="SinariDesa Team" />
 
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="32x32" />
+        <link
+          rel="icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+          sizes="32x32"
+        />
       </Head>
 
       <main className="w-full">
@@ -68,6 +74,9 @@ export default function Home() {
         <div className="bg-white">
           {/* Header */}
           <Header />
+
+          {/* Dampak */}
+          <Dampak />
 
           {/* Program Unggulan */}
           <ProgramUnggulan />
@@ -92,7 +101,7 @@ export default function Home() {
 
           {/* InternetOffline */}
           <InternetOffline />
-          
+
           {/* Belajar Cerdas */}
           <SmartAI />
 
